@@ -1,10 +1,16 @@
 [![npm version](https://badge.fury.io/js/bacon.react.svg)](http://badge.fury.io/js/bacon.react)
 
+## Get started
+
 ```js
 import React from "react"
 import Bacon from "baconjs"
 import Reify from "bacon.react"
+```
 
+## Observe cardinality
+
+```js
 // n = 1
 <Reify>{Bacon.constant(<h1>LOL BAL</h1>)}</Reify>
 => <h1>LOL BAL</h1>
@@ -17,3 +23,19 @@ import Reify from "bacon.react"
 <Reify><h2>{Bacon.constant("LOL")} {Bacon.constant("BAL")}</h2></Reify>
 => <h2>LOL BAL</h2>
 ```
+
+## Optional lifecycle props
+
+```js
+<Reify
+  willMount={self => ...}
+  didMount={self => ...}
+  willUnmount={self => ...}>
+  ...
+</Reify>
+```
+
+## Longer examples
+
+* [TodoMVC](https://github.com/polytypic/atomi-todomvc)
+* [Atomi-POC](https://github.com/polytypic/atomi-poc)
