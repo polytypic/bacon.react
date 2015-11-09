@@ -1,0 +1,28 @@
+{
+  "name": "bacon.react",
+  "version": "0.1.0",
+  "keywords": [
+    "impure",
+    "non-reactive"
+  ],
+  "description": "Embed Bacon streams into React Virtual DOM",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polytypic/bacon.react.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/polytypic/bacon.react",
+  "scripts": {
+    "prepublish": "npm run dist",
+    "dist": "babel src --source-maps inline --out-dir lib"
+  },
+  "devDependencies": {
+    "babel": "5.8.23",
+    "babelify": "6.3.0",
+    "browserify": "11.2.0",
+    "baconjs": "0.7.80",
+    "react": "0.14.2",
+    "react-dom": "0.14.2"
+  },
+  "main": "lib/bacon.react.js"
+}
