@@ -27,6 +27,8 @@ export default React.createClass({
   },
   componentWillMount() {
     this.trySubscribe(this.props.children)
+    const {willMount} = this.props
+    !willMount || willMount(this)
   },
   componentDidMount() {
     const {didMount} = this.props
@@ -37,6 +39,8 @@ export default React.createClass({
   },
   componentWillUnmount() {
     this.tryDispose()
+    const {willUnmount} = this.props
+    !willUnmount || willUnmount(this)
   },
   render() {
     const {DOM} = this.state
