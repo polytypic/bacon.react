@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/bacon.react.svg)](http://badge.fury.io/js/bacon.react)
+
 ```js
 import React from "react"
 import Bacon from "baconjs"
