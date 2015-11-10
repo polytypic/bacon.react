@@ -18,9 +18,11 @@ export default React.createClass({
     this.tryDispose()
     if (tDOM)
       this.setState(
-        {dispose: (tDOM instanceof Array ? Bacon.combineTemplate(<div>{tDOM}</div>) :
-                   tDOM instanceof Bacon.Observable ? tDOM :
-                   Bacon.combineTemplate(tDOM)).onValue(DOM => this.setState({DOM}))})
+        {dispose: (tDOM instanceof Bacon.Observable ? tDOM :
+                   Bacon.combineTemplate(tDOM instanceof Array
+                                         ? <div>{tDOM}</div>
+                                         : tDOM))
+         .onValue(DOM => this.setState({DOM}))})
   },
   componentWillReceiveProps(nextProps) {
     this.trySubscribe(nextProps.children)
