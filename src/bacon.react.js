@@ -1,8 +1,6 @@
 import Bacon from "baconjs"
 import React from "react"
 
-const invisibleDiv = <div style={{display: "none"}}/>
-
 export default React.createClass({
   getInitialState() {
     return {}
@@ -46,6 +44,6 @@ export default React.createClass({
   },
   render() {
     const {DOM} = this.state
-    return DOM ? DOM : invisibleDiv
+    return DOM ? DOM : null
   }
 })
