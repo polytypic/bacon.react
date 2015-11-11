@@ -28,9 +28,9 @@ import Reify from "bacon.react"
 
 ```js
 <Reify
-  willMount={self => ...}
-  didMount={self => ...}
-  willUnmount={self => ...}>
+  willMount={me => ...}
+  didMount={myself => ...}
+  willUnmount={i => ...}>
   ...
 </Reify>
 ```
