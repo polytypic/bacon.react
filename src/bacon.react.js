@@ -12,21 +12,25 @@ export default React.createClass({
       this.replaceState({})
     }
   },
-  trySubscribe(tDOM) {
+  trySubscribe(props) {
     this.tryDispose()
-    if (tDOM)
-      this.setState(
-        {dispose: (tDOM instanceof Bacon.Observable ? tDOM :
-                   Bacon.combineTemplate(tDOM instanceof Array
-                                         ? <div>{tDOM}</div>
-                                         : tDOM))
-         .onValue(DOM => this.setState({DOM}))})
+    const {children} = props
+    if (children) {
+      let stream = children
+      if (stream instanceof Array) {
+        const {className, id} = props
+        stream = <div className={className} id={id}>{stream}</div>
+      }
+      if (!(stream instanceof Bacon.Observable))
+        stream = Bacon.combineTemplate(stream)
+      this.setState({dispose: stream.onValue(DOM => this.setState({DOM}))})
+    }
   },
   componentWillReceiveProps(nextProps) {
-    this.trySubscribe(nextProps.children)
+    this.trySubscribe(nextProps)
   },
   componentWillMount() {
-    this.trySubscribe(this.props.children)
+    this.trySubscribe(this.props)
     const {willMount} = this.props
     !willMount || willMount(this)
   },
@@ -44,6 +48,11 @@ export default React.createClass({
   },
   render() {
     const {DOM} = this.state
-    return DOM ? DOM : null
+    if (!DOM)
+      return null
+    if (!(DOM instanceof Array))
+      return DOM
+    const {className, id} = this.props
+    return <div className={className} id={id}>{DOM}</div>
   }
 })
