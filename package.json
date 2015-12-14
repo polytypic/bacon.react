@@ -1,6 +1,6 @@
 {
   "name": "bacon.react",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "keywords": [
     "lol-bal",
     "non-reactive"
@@ -17,12 +17,14 @@
     "dist": "babel src --source-maps inline --out-dir lib"
   },
   "devDependencies": {
-    "babel": "5.8.23",
-    "babelify": "6.3.0",
-    "browserify": "11.2.0",
-    "baconjs": "0.7.80",
-    "react": "0.14.2",
-    "react-dom": "0.14.2"
+    "babel": "^6.3.13",
+    "babel-cli": "^6.3.17",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.3.16",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "baconjs": "^0.7.83",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
   },
   "main": "lib/bacon.react.js"
 }
