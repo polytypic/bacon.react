@@ -2,7 +2,7 @@
 
 ## Get started
 
-```js
+```jsx
 import React from "react"
 import Bacon from "baconjs"
 import Reify from "bacon.react"
@@ -10,7 +10,7 @@ import Reify from "bacon.react"
 
 ## Observe cardinality
 
-```js
+```jsx
 // n = 1
 <Reify>{Bacon.constant(<h1>LOL BAL</h1>)}</Reify>
 => <h1>LOL BAL</h1>
@@ -29,7 +29,7 @@ conveniently reified HTML elements.
 
 ## Optional lifecycle props
 
-```js
+```jsx
 <Reify
   willMount={me => ...}
   didMount={myself => ...}
