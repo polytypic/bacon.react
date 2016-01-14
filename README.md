@@ -24,6 +24,9 @@ import Reify from "bacon.react"
 => <h2>LOL BAL</h2>
 ```
 
+See also [bacon.react.html](https://github.com/polytypic/bacon.react.html) for
+conveniently reified HTML elements.
+
 ## Optional lifecycle props
 
 ```js
