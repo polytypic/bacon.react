@@ -1,3 +1,7 @@
+*NOTE:* This library is deprecated.
+[Bacon.React.HTML](https://github.com/polytypic/bacon.react.html) is the
+successor of this library.
+
 [![npm version](https://badge.fury.io/js/bacon.react.svg)](http://badge.fury.io/js/bacon.react)
 
 ## Get started
@@ -24,9 +28,6 @@ import Reify from "bacon.react"
 => <h2>LOL BAL</h2>
 ```
 
-See also [bacon.react.html](https://github.com/polytypic/bacon.react.html) for
-conveniently reified HTML elements.
-
 ## Optional lifecycle props
 
 ```jsx
@@ -37,8 +38,3 @@ conveniently reified HTML elements.
   ...
 </Reify>
 ```
-
-## Longer examples
-
-* [TodoMVC](https://github.com/polytypic/atomi-todomvc)
-* [Atomi-POC](https://github.com/polytypic/atomi-poc)
