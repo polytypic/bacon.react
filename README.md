@@ -1,5 +1,5 @@
 *NOTE:* This library is deprecated.
-[Bacon.React.HTML](https://github.com/polytypic/bacon.react.html) is the
+[Bacon.React.HTML](https://github.com/dirty-js/bacon.react.html) is the
 successor of this library.
 
 [![npm version](https://badge.fury.io/js/bacon.react.svg)](http://badge.fury.io/js/bacon.react)
